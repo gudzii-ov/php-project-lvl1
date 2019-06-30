@@ -1,9 +1,8 @@
 {
     "name": "gudzii-ov/brain-games",
-    "description": "A set of simple math games",
-    "version": "0.1.0",
-    "minimum-stability": "dev",
+    "bin": ["bin/brain-games"],
     "type": "project",
+    "description": "A set of simple math games",
     "license": "ISC",
     "authors": [
         {
@@ -11,6 +10,5 @@
             "email": "oleg198679@gmail.com"
         }
     ],
-    "bin": ["bin/brain-games"],
     "require": {}
 }
