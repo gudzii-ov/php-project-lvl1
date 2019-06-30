@@ -1,6 +1,7 @@
 {
     "name": "gudzii-ov/brain-games",
     "description": "A set of simple math games",
+    "version": "0.1.0",
     "type": "project",
     "license": "ISC",
     "authors": [
