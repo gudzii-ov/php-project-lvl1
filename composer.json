@@ -1,7 +1,8 @@
 {
     "name": "gudzii-ov/brain-games",
     "bin": [
-        "bin/brain-even"
+        "bin/brain-even",
+        "bin/brain-calc"
     ],
     "type": "project",
     "description": "A set of simple math games",
@@ -18,7 +19,8 @@
     "autoload": {
         "files": [
             "src/Engine.php",
-            "src/games/EvenGame.php"
+            "src/games/EvenGame.php",
+            "src/games/CalculatorGame.php"
         ]
     },
     "require": {
