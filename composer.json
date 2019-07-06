@@ -1,6 +1,9 @@
 {
     "name": "gudzii-ov/brain-games",
-    "bin": ["bin/brain-games"],
+    "bin": [
+        "bin/brain-games",
+        "bin/brain-even"
+    ],
     "type": "project",
     "description": "A set of simple math games",
     "license": "ISC",
@@ -15,7 +18,8 @@
     },
     "autoload": {
         "files": [
-            "src/Cli.php"
+            "src/Cli.php",
+            "src/EvenGame.php"
         ]
     },
     "require": {
