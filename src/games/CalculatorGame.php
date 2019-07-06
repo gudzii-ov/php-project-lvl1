@@ -2,8 +2,6 @@
 
 namespace BrainGames\Games\CalculatorGame;
 
-use function \cli\line;
-use function \cli\prompt;
 use function BrainGames\Engine\runEngine;
 
 function run()
