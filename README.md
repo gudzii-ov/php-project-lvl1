@@ -8,3 +8,7 @@ A set of simple math console games.
 ## Installation asciinema
 
 [![asciicast](https://asciinema.org/a/254424.png)](https://asciinema.org/a/254424)
+
+## Plaing "is even" game
+
+[![asciicast](https://asciinema.org/a/256006.png)](https://asciinema.org/a/256006)
