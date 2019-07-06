@@ -9,6 +9,6 @@ A set of simple math console games.
 
 [![asciicast](https://asciinema.org/a/254424.png)](https://asciinema.org/a/254424)
 
-## Plaing "is even" game
+## Playing "is even" game
 
 [![asciicast](https://asciinema.org/a/256006.png)](https://asciinema.org/a/256006)
