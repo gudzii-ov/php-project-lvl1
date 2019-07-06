@@ -5,10 +5,14 @@
 
 A set of simple math console games.
 
-## Installation asciinema
+## Installation
 
 [![asciicast](https://asciinema.org/a/254424.png)](https://asciinema.org/a/254424)
 
 ## Playing "is even" game
 
 [![asciicast](https://asciinema.org/a/256006.png)](https://asciinema.org/a/256006)
+
+## Playing "calc" game
+
+[![asciicast](https://asciinema.org/a/256020.png)](https://asciinema.org/a/256020)
