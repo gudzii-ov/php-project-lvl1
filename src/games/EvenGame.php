@@ -12,8 +12,8 @@ function run()
 
     $getGameData = function () {
         $gameData = array();
-        $gameData[] = rand(0, 100);
-        $gameData[] = $gameData[0] % 2 === 0 ? 'yes' : 'no';
+        $gameData[0] = rand(0, 100);
+        $gameData[1] = $gameData[0] % 2 === 0 ? 'yes' : 'no';
         
         return $gameData;
     };
