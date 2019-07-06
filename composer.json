@@ -1,7 +1,6 @@
 {
     "name": "gudzii-ov/brain-games",
     "bin": [
-        "bin/brain-games",
         "bin/brain-even"
     ],
     "type": "project",
@@ -18,8 +17,8 @@
     },
     "autoload": {
         "files": [
-            "src/Cli.php",
-            "src/EvenGame.php"
+            "src/Engine.php",
+            "src/games/EvenGame.php"
         ]
     },
     "require": {
