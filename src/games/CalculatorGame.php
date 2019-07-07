@@ -17,22 +17,20 @@ function run()
 
         switch ($expressionNum) {
             case 1:
-                $gameData[0] = "$num1 + $num2";
+                $gameData['question'] = "$num1 + $num2";
                 $rightAnswer = $num1 + $num2;
-                $gameData[1] = "$rightAnswer";
+                $gameData['rightAnswer'] = "$rightAnswer";
                 break;
             case 2:
-                $gameData[0] = "$num1 - $num2";
+                $gameData['question'] = "$num1 - $num2";
                 $rightAnswer = $num1 - $num2;
-                $gameData[1] = "$rightAnswer";
+                $gameData['rightAnswer'] = "$rightAnswer";
                 break;
             case 3:
-                $gameData[0] = "$num1 * $num2";
+                $gameData['question'] = "$num1 * $num2";
                 $rightAnswer = $num1 * $num2;
-                $gameData[1] = "$rightAnswer";
+                $gameData['rightAnswer'] = "$rightAnswer";
                 break;
-            default:
-                $gameData[0] = "Question generation error!";
         }
         
         return $gameData;

@@ -10,13 +10,10 @@ function run()
     $message = "Answer \"yes\" if given number is prime. Otherwise answer \"no\".\n";
 
     $getGameData = function () {
-        $gameData = array();
-        
         $num = rand(0, 100);
         $rightAnswer = isPrime($num) ? 'yes' : 'no';
 
-        $gameData[0] = "$num";
-        $gameData[1] = "$rightAnswer";
+        $gameData = ['question' => "$num", 'rightAnswer' => $rightAnswer];
         
         return $gameData;
     };

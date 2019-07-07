@@ -2,9 +2,9 @@
 
 namespace BrainGames\Common;
 
-function gcd($num1, $num2)
+function getGcd($num1, $num2)
 {
-    return $num2 !== 0 ? gcd($num2, $num1 % $num2) : $num1;
+    return $num2 !== 0 ? getGcd($num2, $num1 % $num2) : $num1;
 }
 
 function generateProgression($length, $maxStep)

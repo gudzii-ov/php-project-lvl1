@@ -22,9 +22,10 @@ function run()
         $preparedProgression = array_map(function ($item) use ($numberToHide) {
             return $item === $numberToHide ? ".." : $item;
         }, $progression);
+
+        $question = implode(" ", $preparedProgression);
         
-        $gameData[0] = implode(" ", $preparedProgression);
-        $gameData[1] = "$numberToHide";
+        $gameData = ['question' => $question, 'rightAnswer' => "$numberToHide"];
         
         return $gameData;
     };

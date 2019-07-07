@@ -15,7 +15,7 @@ function runEngine(string $message, $getGameData)
     $count = 0;
 
     do {
-        [$question, $rightAnswer] = $getGameData();
+        ['question' => $question, 'rightAnswer' => $rightAnswer] = $getGameData();
         
         line("Question: %s", $question);
         $userAnswer = prompt("Your answer");
