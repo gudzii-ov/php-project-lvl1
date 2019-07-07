@@ -16,3 +16,7 @@ A set of simple math console games.
 ## Playing "calc" game
 
 [![asciicast](https://asciinema.org/a/256020.png)](https://asciinema.org/a/256020)
+
+## Playing "greater common divisor" game
+
+[![asciicast](https://asciinema.org/a/256095.png)](https://asciinema.org/a/256095)
