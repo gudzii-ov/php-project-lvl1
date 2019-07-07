@@ -9,6 +9,7 @@
     ],
     "type": "project",
     "description": "A set of simple math games",
+    "keywords": ["games", "hexlet", "project", "cli"],
     "license": "ISC",
     "authors": [
         {
