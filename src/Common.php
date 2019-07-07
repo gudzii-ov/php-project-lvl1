@@ -23,3 +23,22 @@ function generateProgression($length, $maxStep)
 
     return $progression;
 }
+
+function isPrime($num)
+{
+    $square = sqrt($num);
+    $divisor = 2;
+
+    $result = true;
+
+    do {
+        if ($num % $divisor === 0) {
+            $result = false;
+            break;
+        }
+
+        $divisor += 1;
+    } while ($divisor <= $square);
+
+    return $result;
+}
