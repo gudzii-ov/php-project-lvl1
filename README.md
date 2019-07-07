@@ -24,3 +24,7 @@ A set of simple math console games.
 ## Playing "arithmetic progression" game
 
 [![asciicast](https://asciinema.org/a/256120.png)](https://asciinema.org/a/256120)
+
+## Playing "is prime" game
+
+[![asciicast](https://asciinema.org/a/256124.png)](https://asciinema.org/a/256124)
