@@ -6,3 +6,20 @@ function gcd($num1, $num2)
 {
     return $num2 !== 0 ? gcd($num2, $num1 % $num2) : $num1;
 }
+
+function generateProgression($length, $maxStep)
+{
+    $firstNum = rand(0, 10);
+    $step = rand(0, $maxStep);
+
+    $progression = array($firstNum);
+
+    $i = 1;
+
+    do {
+        $progression[$i] = $firstNum + $step * $i;
+        $i += 1;
+    } while ($i < $length);
+
+    return $progression;
+}

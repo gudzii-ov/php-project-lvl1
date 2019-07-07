@@ -3,7 +3,8 @@
     "bin": [
         "bin/brain-even",
         "bin/brain-calc",
-        "bin/brain-gcd"
+        "bin/brain-gcd",
+        "bin/brain-progression"
     ],
     "type": "project",
     "description": "A set of simple math games",
@@ -23,7 +24,8 @@
             "src/Common.php",
             "src/games/EvenGame.php",
             "src/games/CalculatorGame.php",
-            "src/games/GcdGame.php"
+            "src/games/GcdGame.php",
+            "src/games/ProgressionGame.php"
         ]
     },
     "require": {
