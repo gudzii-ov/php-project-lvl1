@@ -11,11 +11,10 @@ function run()
 
     $getGameData = function () {
         $progressionLength = 10;
-        $maxProgressionStep = 9;
 
         $gameData = array();
 
-        $progression = generateProgression($progressionLength, $maxProgressionStep);
+        $progression = generateProgression($progressionLength);
         $numberToHideIndex = rand(0, $progressionLength - 1);
         $numberToHide = $progression[$numberToHideIndex];
 

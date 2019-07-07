@@ -13,6 +13,7 @@ function runEngine(string $message, $getGameData)
     line("Hello, %s!\n", $userName);
 
     $count = 0;
+    $gamesCount = 3;
 
     do {
         ['question' => $question, 'rightAnswer' => $rightAnswer] = $getGameData();
@@ -29,5 +30,5 @@ function runEngine(string $message, $getGameData)
         }
 
         line("Congratulations, %s!", $userName);
-    } while ($count < 3);
+    } while ($count < $gamesCount);
 }

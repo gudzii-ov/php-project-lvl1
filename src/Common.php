@@ -7,10 +7,10 @@ function getGcd($num1, $num2)
     return $num2 !== 0 ? getGcd($num2, $num1 % $num2) : $num1;
 }
 
-function generateProgression($length, $maxStep)
+function generateProgression($length)
 {
     $firstNum = rand(0, 10);
-    $step = rand(0, $maxStep);
+    $step = rand(0, 9);
 
     $progression = array($firstNum);
 
