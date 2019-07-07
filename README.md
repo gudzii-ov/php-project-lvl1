@@ -20,3 +20,7 @@ A set of simple math console games.
 ## Playing "greater common divisor" game
 
 [![asciicast](https://asciinema.org/a/256095.png)](https://asciinema.org/a/256095)
+
+## Playing "arithmetic progression" game
+
+[![asciicast](https://asciinema.org/a/256120.png)](https://asciinema.org/a/256120)
