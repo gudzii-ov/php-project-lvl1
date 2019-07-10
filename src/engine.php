@@ -30,5 +30,5 @@ function runEngine(string $message, $getGameData)
         }
 
         line("Congratulations, %s!", $userName);
-    };
+    }
 }
