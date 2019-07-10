@@ -12,10 +12,9 @@ function runEngine(string $message, $getGameData)
     $userName = prompt('May I have your name?');
     line("Hello, %s!\n", $userName);
 
-    $count = 0;
-    $gamesCount = 3;
+    $roundsCount = 3;
 
-    do {
+    for ($i = 0; $i < $roundsCount; $i++) {
         ['question' => $question, 'rightAnswer' => $rightAnswer] = $getGameData();
         
         line("Question: %s", $question);
@@ -23,6 +22,7 @@ function runEngine(string $message, $getGameData)
 
         if ($userAnswer !== $rightAnswer) {
             line("\n'%s' is wrong answer ;(. Correct answer is '%s'.", $userAnswer, $rightAnswer);
+            line("Let's try again, %s!", $userName);
             return;
         } else {
             line("Correct!\n");
@@ -30,5 +30,5 @@ function runEngine(string $message, $getGameData)
         }
 
         line("Congratulations, %s!", $userName);
-    } while ($count < $gamesCount);
+    };
 }
