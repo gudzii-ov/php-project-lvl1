@@ -23,7 +23,7 @@ function generateProgression($length)
 
 function run()
 {
-    $message = "What number is missing in the progression?\n";
+    $message = 'What number is missing in the progression?';
 
     $getGameData = function () {
         $progressionLength = 10;

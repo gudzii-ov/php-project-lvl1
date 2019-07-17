@@ -11,7 +11,7 @@ function getGcd($num1, $num2)
 
 function run()
 {
-    $message = "Find the greatest common divisor of given numbers.\n";
+    $message = 'Find the greatest common divisor of given numbers.';
 
     $getGameData = function () {
         $num1 = rand(0, 50);

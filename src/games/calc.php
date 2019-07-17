@@ -6,7 +6,7 @@ use function BrainGames\Engine\runEngine;
 
 function run()
 {
-    $message = "What is the result of the expression?\n";
+    $message = 'What is the result of the expression?';
 
     $getGameData = function () {
         $gameData = array();

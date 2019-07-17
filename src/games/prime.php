@@ -25,7 +25,7 @@ function isPrime($num)
 
 function run()
 {
-    $message = "Answer \"yes\" if given number is prime. Otherwise answer \"no\".\n";
+    $message = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
     $getGameData = function () {
         $num = rand(0, 100);
