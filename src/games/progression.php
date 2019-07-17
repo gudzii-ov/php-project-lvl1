@@ -31,16 +31,16 @@ function run()
         $gameData = array();
 
         $progression = generateProgression($progressionLength);
-        $numberToHideIndex = rand(0, $progressionLength - 1);
-        $numberToHide = $progression[$numberToHideIndex];
+        $hiddenNumberIndex = rand(0, $progressionLength - 1);
+        $hiddenNumber = $progression[$hiddenNumberIndex];
 
-        $preparedProgression = array_map(function ($item) use ($numberToHide) {
-            return $item === $numberToHide ? ".." : $item;
+        $preparedProgression = array_map(function ($item) use ($hiddenNumber) {
+            return $item === $hiddenNumber ? ".." : $item;
         }, $progression);
 
         $question = implode(" ", $preparedProgression);
         
-        $gameData = ['question' => $question, 'rightAnswer' => "$numberToHide"];
+        $gameData = ['question' => $question, 'rightAnswer' => "$hiddenNumber"];
         
         return $gameData;
     };
