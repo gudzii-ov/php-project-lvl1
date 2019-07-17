@@ -13,20 +13,23 @@ function run()
         
         $num1 = rand(0, 100);
         $num2 = rand(0, 100);
-        $expressionNum = rand(1, 3);
 
-        switch ($expressionNum) {
-            case 1:
+        $operations = ["+", "-", "*"];
+        $operationIndex = rand(1, count($operations)) - 1;
+        $operation = $operations[$operationIndex];
+
+        switch ($operation) {
+            case "+":
                 $gameData['question'] = "$num1 + $num2";
                 $rightAnswer = $num1 + $num2;
                 $gameData['rightAnswer'] = "$rightAnswer";
                 break;
-            case 2:
+            case "-":
                 $gameData['question'] = "$num1 - $num2";
                 $rightAnswer = $num1 - $num2;
                 $gameData['rightAnswer'] = "$rightAnswer";
                 break;
-            case 3:
+            case "*":
                 $gameData['question'] = "$num1 * $num2";
                 $rightAnswer = $num1 * $num2;
                 $gameData['rightAnswer'] = "$rightAnswer";
