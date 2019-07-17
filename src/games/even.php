@@ -14,9 +14,9 @@ function run()
     $message = 'Answer "yes" if number is even otherwise answer "no".';
 
     $getGameData = function () {
-        $num = rand(0, 100);
-        $rightAnswer = isEven($num) ? 'yes' : 'no';
-        $gameData = ['question' => "$num", 'rightAnswer' => $rightAnswer];
+        $question = rand(0, 100);
+        $rightAnswer = isEven($question) ? 'yes' : 'no';
+        $gameData = ['question' => "$question", 'rightAnswer' => $rightAnswer];
         
         return $gameData;
     };
