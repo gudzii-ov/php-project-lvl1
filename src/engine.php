@@ -14,7 +14,7 @@ function runEngine(string $message, $getGameData)
 
     $roundsCount = 3;
 
-    for ($i = 0; $i < $roundsCount; $i++) {
+    for ($round = 1; $round <= $roundsCount; $round++) {
         ['question' => $question, 'rightAnswer' => $rightAnswer] = $getGameData();
         
         line("Question: %s", $question);
@@ -26,7 +26,6 @@ function runEngine(string $message, $getGameData)
             return;
         } else {
             line("Correct!\n");
-            $count += 1;
         }
 
         line("Congratulations, %s!", $userName);

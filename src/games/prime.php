@@ -3,7 +3,25 @@
 namespace BrainGames\Games\Prime;
 
 use function BrainGames\Engine\runEngine;
-use function BrainGames\Common\isPrime;
+
+function isPrime($num)
+{
+    $square = sqrt($num);
+    $divisor = 2;
+
+    $result = true;
+
+    do {
+        if ($num % $divisor === 0) {
+            $result = false;
+            break;
+        }
+
+        $divisor += 1;
+    } while ($divisor <= $square);
+
+    return $result;
+}
 
 function run()
 {

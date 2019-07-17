@@ -23,7 +23,6 @@
     "autoload": {
         "files": [
             "src/engine.php",
-            "src/common.php",
             "src/games/even.php",
             "src/games/calc.php",
             "src/games/gcd.php",

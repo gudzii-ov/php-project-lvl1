@@ -3,7 +3,11 @@
 namespace BrainGames\Games\Gcd;
 
 use function BrainGames\Engine\runEngine;
-use function BrainGames\Common\getGcd;
+
+function getGcd($num1, $num2)
+{
+    return $num2 !== 0 ? getGcd($num2, $num1 % $num2) : $num1;
+}
 
 function run()
 {

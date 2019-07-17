@@ -3,7 +3,23 @@
 namespace BrainGames\Games\Progression;
 
 use function BrainGames\Engine\runEngine;
-use function BrainGames\Common\generateProgression;
+
+function generateProgression($length)
+{
+    $firstNum = rand(0, 10);
+    $step = rand(0, 9);
+
+    $progression = array($firstNum);
+
+    $i = 1;
+
+    do {
+        $progression[$i] = $firstNum + $step * $i;
+        $i += 1;
+    } while ($i < $length);
+
+    return $progression;
+}
 
 function run()
 {
