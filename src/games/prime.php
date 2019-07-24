@@ -8,21 +8,17 @@ const MESSAGE = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function isPrime($num)
 {
-    $square = sqrt($num);
     $divisor = 2;
-
-    $result = true;
 
     do {
         if ($num % $divisor === 0) {
-            $result = false;
-            break;
+            return false;
         }
 
         $divisor += 1;
-    } while ($divisor <= $square);
+    } while ($divisor <= sqrt($num));
 
-    return $result;
+    return true;
 }
 
 function runPrime()

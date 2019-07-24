@@ -5,6 +5,8 @@ namespace BrainGames\engine;
 use function \cli\line;
 use function \cli\prompt;
 
+const ROUNDS = 3;
+
 function runEngine(string $message, $getGameData)
 {
     line("Welcome to the Brain Games!\n");
@@ -12,9 +14,7 @@ function runEngine(string $message, $getGameData)
     $userName = prompt('May I have your name?');
     line("Hello, %s!\n", $userName);
 
-    $roundsCount = 3;
-
-    for ($round = 1; $round <= $roundsCount; $round++) {
+    for ($i = 0; $i < ROUNDS; $i++) {
         ['question' => $question, 'rightAnswer' => $rightAnswer] = $getGameData();
         
         line("Question: %s", $question);
