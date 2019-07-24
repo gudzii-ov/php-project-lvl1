@@ -5,6 +5,7 @@ namespace BrainGames\games\progression;
 use function BrainGames\engine\runEngine;
 
 const MESSAGE = 'What number is missing in the progression?';
+const PROGRESSION_LENGTH = 10;
 
 function generateProgression($length)
 {
@@ -26,21 +27,20 @@ function generateProgression($length)
 function runProgression()
 {
     $getGameData = function () {
-        $progressionLength = 10;
 
         $gameData = array();
 
-        $progression = generateProgression($progressionLength);
-        $hiddenNumberIndex = rand(0, $progressionLength - 1);
-        $hiddenNumber = $progression[$hiddenNumberIndex];
+        $progression = generateProgression(PROGRESSION_LENGTH);
+        $hiddenItemIndex = rand(0, PROGRESSION_LENGTH - 1);
+        $hiddenItem = $progression[$hiddenItemIndex];
 
-        $preparedProgression = array_map(function ($item) use ($hiddenNumber) {
-            return $item === $hiddenNumber ? ".." : $item;
+        $preparedProgression = array_map(function ($item) use ($hiddenItem) {
+            return $item === $hiddenItem ? ".." : $item;
         }, $progression);
 
         $question = implode(" ", $preparedProgression);
         
-        $gameData = ['question' => $question, 'rightAnswer' => "$hiddenNumber"];
+        $gameData = ['question' => $question, 'rightAnswer' => "$hiddenItem"];
         
         return $gameData;
     };
