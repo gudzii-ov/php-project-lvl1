@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainGames\Games\Progression;
+namespace BrainGames\games\progression;
 
-use function BrainGames\Engine\runEngine;
+use function BrainGames\engine\runEngine;
 
 const MESSAGE = 'What number is missing in the progression?';
 
@@ -23,7 +23,7 @@ function generateProgression($length)
     return $progression;
 }
 
-function run()
+function runProgression()
 {
     $getGameData = function () {
         $progressionLength = 10;

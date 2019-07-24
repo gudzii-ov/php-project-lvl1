@@ -1,12 +1,12 @@
 <?php
 
-namespace BrainGames\Games\Calc;
+namespace BrainGames\games\calc;
 
-use function BrainGames\Engine\runEngine;
+use function BrainGames\engine\runEngine;
 
 const MESSAGE = 'What is the result of the expression?';
 
-function run()
+function runCalc()
 {
     $getGameData = function () {
         $gameData = array();
