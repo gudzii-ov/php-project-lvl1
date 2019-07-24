@@ -4,10 +4,10 @@ namespace BrainGames\Games\Calc;
 
 use function BrainGames\Engine\runEngine;
 
+const MESSAGE = 'What is the result of the expression?';
+
 function run()
 {
-    $message = 'What is the result of the expression?';
-
     $getGameData = function () {
         $gameData = array();
         
@@ -39,5 +39,5 @@ function run()
         return $gameData;
     };
 
-    runEngine($message, $getGameData);
+    runEngine(MESSAGE, $getGameData);
 }

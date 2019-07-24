@@ -4,6 +4,8 @@ namespace BrainGames\Games\Progression;
 
 use function BrainGames\Engine\runEngine;
 
+const MESSAGE = 'What number is missing in the progression?';
+
 function generateProgression($length)
 {
     $firstNum = rand(0, 10);
@@ -23,8 +25,6 @@ function generateProgression($length)
 
 function run()
 {
-    $message = 'What number is missing in the progression?';
-
     $getGameData = function () {
         $progressionLength = 10;
 
@@ -45,5 +45,5 @@ function run()
         return $gameData;
     };
 
-    runEngine($message, $getGameData);
+    runEngine(MESSAGE, $getGameData);
 }

@@ -4,6 +4,8 @@ namespace BrainGames\Games\Prime;
 
 use function BrainGames\Engine\runEngine;
 
+const MESSAGE = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 function isPrime($num)
 {
     $square = sqrt($num);
@@ -25,8 +27,6 @@ function isPrime($num)
 
 function run()
 {
-    $message = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-
     $getGameData = function () {
         $num = rand(0, 100);
         $rightAnswer = isPrime($num) ? 'yes' : 'no';
@@ -36,5 +36,5 @@ function run()
         return $gameData;
     };
 
-    runEngine($message, $getGameData);
+    runEngine(MESSAGE, $getGameData);
 }
