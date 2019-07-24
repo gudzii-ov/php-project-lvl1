@@ -7,19 +7,13 @@ use function BrainGames\engine\runEngine;
 const MESSAGE = 'What number is missing in the progression?';
 const PROGRESSION_LENGTH = 10;
 
-function generateProgression($length)
+function generateProgression($firstItem, $step, $length)
 {
-    $firstNum = rand(0, 10);
-    $step = rand(0, 9);
+    $progression = array($firstItem);
 
-    $progression = array($firstNum);
-
-    $i = 1;
-
-    do {
-        $progression[$i] = $firstNum + $step * $i;
-        $i += 1;
-    } while ($i < $length);
+    for ($i = 1; $i < $length; $i++) {
+        $progression[$i] = $firstItem + $step * $i;
+    };
 
     return $progression;
 }
@@ -30,7 +24,10 @@ function runProgression()
 
         $gameData = array();
 
-        $progression = generateProgression(PROGRESSION_LENGTH);
+        $progressionStart = rand(0, 10);
+        $progressionStep = rand(0, 9);
+        $progression = generateProgression($progressionStart, $progressionStep, PROGRESSION_LENGTH);
+
         $hiddenItemIndex = rand(0, PROGRESSION_LENGTH - 1);
         $hiddenItem = $progression[$hiddenItemIndex];
 
