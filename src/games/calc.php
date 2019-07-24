@@ -15,26 +15,25 @@ function runCalc()
         $num2 = rand(0, 100);
 
         $operations = ["+", "-", "*"];
+        
         $operationIndex = rand(1, count($operations)) - 1;
         $operation = $operations[$operationIndex];
 
+        $question = "$num1 $operation $num2";
+
         switch ($operation) {
             case "+":
-                $gameData[0] = "$num1 + $num2";
                 $rightAnswer = $num1 + $num2;
-                $gameData[1] = "$rightAnswer";
                 break;
             case "-":
-                $gameData[0] = "$num1 - $num2";
                 $rightAnswer = $num1 - $num2;
-                $gameData[1] = "$rightAnswer";
                 break;
             case "*":
-                $gameData[0] = "$num1 * $num2";
                 $rightAnswer = $num1 * $num2;
-                $gameData[1] = "$rightAnswer";
                 break;
         }
+
+        $gameData = [$question, "$rightAnswer"];
         
         return $gameData;
     };
