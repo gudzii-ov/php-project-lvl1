@@ -37,7 +37,7 @@ function runProgression()
 
         $question = implode(" ", $preparedProgression);
         
-        $gameData = ['question' => $question, 'rightAnswer' => "$hiddenItem"];
+        $gameData = [$question, "$hiddenItem"];
         
         return $gameData;
     };

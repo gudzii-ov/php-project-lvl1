@@ -20,19 +20,19 @@ function runCalc()
 
         switch ($operation) {
             case "+":
-                $gameData['question'] = "$num1 + $num2";
+                $gameData[0] = "$num1 + $num2";
                 $rightAnswer = $num1 + $num2;
-                $gameData['rightAnswer'] = "$rightAnswer";
+                $gameData[1] = "$rightAnswer";
                 break;
             case "-":
-                $gameData['question'] = "$num1 - $num2";
+                $gameData[0] = "$num1 - $num2";
                 $rightAnswer = $num1 - $num2;
-                $gameData['rightAnswer'] = "$rightAnswer";
+                $gameData[1] = "$rightAnswer";
                 break;
             case "*":
-                $gameData['question'] = "$num1 * $num2";
+                $gameData[0] = "$num1 * $num2";
                 $rightAnswer = $num1 * $num2;
-                $gameData['rightAnswer'] = "$rightAnswer";
+                $gameData[1] = "$rightAnswer";
                 break;
         }
         

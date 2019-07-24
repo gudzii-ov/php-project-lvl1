@@ -24,10 +24,10 @@ function isPrime($num)
 function runPrime()
 {
     $getGameData = function () {
-        $num = rand(0, 100);
-        $rightAnswer = isPrime($num) ? 'yes' : 'no';
+        $question = rand(0, 100);
+        $rightAnswer = isPrime($question) ? 'yes' : 'no';
 
-        $gameData = ['question' => "$num", 'rightAnswer' => $rightAnswer];
+        $gameData = ["$question", $rightAnswer];
         
         return $gameData;
     };
