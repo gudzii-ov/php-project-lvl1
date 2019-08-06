@@ -16,7 +16,7 @@ function runEven()
     $getGameData = function () {
         $question = rand(0, 100);
         $rightAnswer = isEven($question) ? 'yes' : 'no';
-        $gameData = ["$question", $rightAnswer];
+        $gameData = [$question, $rightAnswer];
         
         return $gameData;
     };

@@ -5,7 +5,7 @@ namespace BrainGames\engine;
 use function \cli\line;
 use function \cli\prompt;
 
-const ROUNDS = 3;
+const ROUNDS_COUNT = 3;
 
 function runEngine(string $message, $getGameData)
 {
@@ -14,7 +14,7 @@ function runEngine(string $message, $getGameData)
     $userName = prompt('May I have your name?');
     line("Hello, %s!\n", $userName);
 
-    for ($i = 0; $i < ROUNDS; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         [$question, $rightAnswer] = $getGameData();
         
         line("Question: %s", $question);
@@ -24,10 +24,10 @@ function runEngine(string $message, $getGameData)
             line("\n'%s' is wrong answer ;(. Correct answer is '%s'.", $userAnswer, $rightAnswer);
             line("Let's try again, %s!", $userName);
             return;
-        } else {
-            line("Correct!\n");
         }
-
-        line("Congratulations, %s!", $userName);
+        
+        line("Correct!\n");
     }
+
+    line("Congratulations, %s!", $userName);
 }

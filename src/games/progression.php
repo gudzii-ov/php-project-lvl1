@@ -21,9 +21,6 @@ function generateProgression($firstItem, $step, $length)
 function runProgression()
 {
     $getGameData = function () {
-
-        $gameData = array();
-
         $progressionStart = rand(0, 10);
         $progressionStep = rand(0, 9);
         $progression = generateProgression($progressionStart, $progressionStep, PROGRESSION_LENGTH);
@@ -31,11 +28,11 @@ function runProgression()
         $hiddenItemIndex = rand(0, PROGRESSION_LENGTH - 1);
         $hiddenItem = $progression[$hiddenItemIndex];
 
-        $preparedProgression = array_map(function ($item) use ($hiddenItem) {
+        $finishedProgression = array_map(function ($item) use ($hiddenItem) {
             return $item === $hiddenItem ? ".." : $item;
         }, $progression);
 
-        $question = implode(" ", $preparedProgression);
+        $question = implode(" ", $finishedProgression);
         
         $gameData = [$question, "$hiddenItem"];
         
