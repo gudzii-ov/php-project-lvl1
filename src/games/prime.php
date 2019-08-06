@@ -8,6 +8,14 @@ const MESSAGE = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function isPrime($num)
 {
+    if ($num <= 1) {
+        return false;
+    }
+
+    if ($num === 2) {
+        return true;
+    }
+
     $divisor = 2;
 
     do {
