@@ -35,7 +35,7 @@ function runPrime()
         $question = rand(0, 100);
         $rightAnswer = isPrime($question) ? 'yes' : 'no';
 
-        $gameData = ["$question", $rightAnswer];
+        $gameData = [$question, $rightAnswer];
         
         return $gameData;
     };
