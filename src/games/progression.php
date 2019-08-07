@@ -18,23 +18,27 @@ function generateProgression($firstItem, $step, $length)
     return $progression;
 }
 
+function prepareQuestion($progression, $hiddenItem)
+{
+    $questionData = array_map(function ($item) use ($hiddenItem) {
+        return $item === $hiddenItem ? ".." : $item;
+    }, $progression);
+
+    return implode(" ", $questionData);
+}
+
 function runProgression()
 {
     $getGameData = function () {
         $progressionStart = rand(0, 10);
         $progressionStep = rand(0, 9);
         $progression = generateProgression($progressionStart, $progressionStep, PROGRESSION_LENGTH);
-
         $hiddenItemIndex = rand(0, PROGRESSION_LENGTH - 1);
-        $hiddenItem = $progression[$hiddenItemIndex];
 
-        $finishedProgression = array_map(function ($item) use ($hiddenItem) {
-            return $item === $hiddenItem ? ".." : $item;
-        }, $progression);
-
-        $question = implode(" ", $finishedProgression);
+        $rightAnswer = $progression[$hiddenItemIndex];
+        $question = prepareQuestion($progression, $rightAnswer);
         
-        $gameData = [$question, "$hiddenItem"];
+        $gameData = [$question, (string) $rightAnswer];
         
         return $gameData;
     };
