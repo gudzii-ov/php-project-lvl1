@@ -16,9 +16,10 @@ function runGcd()
     $getGameData = function () {
         $num1 = rand(0, 50);
         $num2 = rand(0, 50);
+        $question = "$num1 $num2";
         $rightAnswer = getGcd($num1, $num2);
 
-        $gameData = ["$num1 $num2", "$rightAnswer"];
+        $gameData = [$question, (string) $rightAnswer];
         
         return $gameData;
     };
